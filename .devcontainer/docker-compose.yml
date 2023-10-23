@@ -38,7 +38,7 @@ services:
       - mariadb-data:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: mariadb
-      MYSQL_DATABASE: mariadb
+      MYSQL_DATABASE: hplussport
       MYSQL_USER: mariadb
       MYSQL_PASSWORD: mariadb
 
