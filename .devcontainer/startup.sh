@@ -1,4 +1,3 @@
-```sh
 # Wait for database server and set up the initial database
 for i in $(seq 1 30); do
   if mysql -h 127.0.0.1 -uroot -pmariadb -e ";" ; then
@@ -9,4 +8,3 @@ for i in $(seq 1 30); do
 sleep 1
 echo Waiting for db: $i
 done
-```
