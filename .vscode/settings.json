@@ -29,8 +29,8 @@
       "server": "127.0.0.1",
       "port": 3306,
       "driver": "MariaDB",
-      "name": "MariaDB Database",
-      "database": "mariadb",
+      "name": "H+ Sport",
+      "database": "hplussport",
       "username": "mariadb",
       "password": "mariadb"
     }
