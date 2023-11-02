@@ -1,10 +1,10 @@
 # Wait for database server and set up the initial database
-for i in $(seq 1 30); do
-  if mysql -h 127.0.0.1 -uroot -pmariadb -e ";" ; then
-    mysql -h 127.0.0.1 -uroot -pmariadb < .devcontainer/H_Plus_Sports_MySQL.sql &&
-    echo "Database is set up" &&
-    break
-  fi
-sleep 1
-echo Waiting for db: $i
-done
+if [ -f .devcontainer/setup-mariadb.sql ]; then
+  sleep 20
+  mysql -h 127.0.0.1 -uroot -pmariadb < .devcontainer/setup-mariadb.sql
+fi
+
+if [ -f .devcontainer/H_Plus_Sports_MySQL.sql ]; then
+  sleep 20
+  mysql -h 127.0.0.1 -umariadb -pmariadb < .devcontainer/H_Plus_Sports_MySQL.sql
+fi

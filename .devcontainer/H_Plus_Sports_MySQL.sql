@@ -23,7 +23,6 @@
 # ------------------------------------------------------------
 
 CREATE DATABASE IF NOT EXISTS hplussport;
-GRANT ALL PRIVILEGES ON *.* TO 'mariadb'@'%' IDENTIFIED BY 'hplussport';
 
 USE hplussport;
 
