@@ -1,0 +1,4 @@
+INSERT INTO Customer (
+  )
+VALUES (
+  );
