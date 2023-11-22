@@ -1,6 +1,6 @@
 SELECT * 
 FROM Customer
-WHERE FirstName IS NULL OR 
+WHERE FirstName IS NULL OR
 LastName IS NULL OR 
 Email IS NULL OR 
 Phone IS NULL OR 
