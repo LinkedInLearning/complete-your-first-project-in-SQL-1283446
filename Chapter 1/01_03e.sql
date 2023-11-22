@@ -1,3 +1,4 @@
+-- Insert new grape flavor product into table
 INSERT INTO Product (
     ProductID,
     ProductCode,

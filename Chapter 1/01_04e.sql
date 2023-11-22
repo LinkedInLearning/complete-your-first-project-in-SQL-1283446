@@ -1,2 +1,3 @@
+-- Sort Orders table
 SELECT * FROM Orders
-ORDER BY CreationDate;
+ORDER BY CreationDate DESC;

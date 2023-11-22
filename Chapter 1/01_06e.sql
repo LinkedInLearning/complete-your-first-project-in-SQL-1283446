@@ -1,3 +1,4 @@
+-- Remove null values from customer table
 DELETE FROM Customer
 WHERE COALESCE(FirstName,
 LastName,
