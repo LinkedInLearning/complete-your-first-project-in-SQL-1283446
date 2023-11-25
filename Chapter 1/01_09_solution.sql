@@ -19,5 +19,5 @@ VALUES (
     '4029 Park Street',
     'Kansas City',
     'MO',
-    64161
+    '64161'
   );

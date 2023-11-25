@@ -1,22 +1,8 @@
-INSERT INTO Customer (
-    CustomerID,
-    FirstName,
-    LastName,
-    Email,
-    Phone,
-    Address,
-    City,
-    State,
-    Zipcode
-  )
-VALUES (
-    1100,
-    'Jane',
-    'Paterson',
-    'jane.paterson@gmail.com',
-    '(912)459-2910',
-    '4029 Park Street',
-    'Kansas City',
-    'MO',
-    64161
-  );
+SELECT 
+TABLE_CATALOG,
+TABLE_SCHEMA,
+TABLE_NAME, 
+COLUMN_NAME, 
+DATA_TYPE 
+FROM INFORMATION_SCHEMA.COLUMNS 
+WHERE TABLE_NAME = "Customer";

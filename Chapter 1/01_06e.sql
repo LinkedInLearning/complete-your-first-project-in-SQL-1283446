@@ -1,10 +1,8 @@
 -- Remove null values from customer table
-DELETE FROM Customer
-WHERE COALESCE(FirstName,
+SELECT FirstName,
 LastName,
-Email, 
-Phone,
-Address,
-City,
-State,
-Zipcode) IS NULL;
+Email,
+Phone 
+FROM Customer
+WHERE Email IS NOT NULL AND 
+Phone IS NOT NULL;
