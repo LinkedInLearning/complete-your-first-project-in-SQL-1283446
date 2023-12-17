@@ -1,0 +1,1 @@
+-- Find average daily sales
