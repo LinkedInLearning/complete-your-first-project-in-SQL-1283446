@@ -1,6 +1,7 @@
 -- Find average daily sales
 SELECT 
-SUM(Quantity) / COUNT(DISTINCT DAY(CreationDate))
+SUM(Quantity) /
+COUNT(DISTINCT CreationDate) as AverageDailySales
 FROM Orders
-LEFT JOIN OrderItem
+LEFT OUTER JOIN OrderItem
 ON Orders.OrderID = OrderItem.OrderID;
