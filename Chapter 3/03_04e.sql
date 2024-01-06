@@ -5,4 +5,5 @@ COUNT(*) as TimesPurchased
 FROM OrderItem AS a
 INNER JOIN OrderItem AS b ON a.OrderID = b.OrderID
 AND a.ProductID != b.ProductID
-GROUP BY a.ProductID, b.ProductID;
+GROUP BY a.ProductID, b.ProductID
+ORDER BY TimesPurchased DESC;
