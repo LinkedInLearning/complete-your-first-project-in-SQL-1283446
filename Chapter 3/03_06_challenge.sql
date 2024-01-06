@@ -1,1 +1,1 @@
--- Calculate customer repeat rate
+-- Determine new customers
