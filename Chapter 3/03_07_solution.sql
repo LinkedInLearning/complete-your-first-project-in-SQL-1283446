@@ -1,16 +1,14 @@
 -- Calculate customer repeat rate
-SELECT
+WITH Repeat_Customers AS
 (SELECT
-Customer.CustomerID
+CustomerID as Repeat_Cus
 FROM Orders
-LEFT OUTER JOIN Customer
-ON Orders.CustomerID = Customer.CustomerID
-GROUP BY Customer.CustomerID
-HAVING COUNT(OrderID) = 1
-LIMIT 1),
-COUNT(Customer.CustomerID)
-as InfrequentCustomer
-FROM Customer
-LEFT OUTER JOIN Orders
-ON Customer.CustomerID = Orders.CustomerID 
-GROUP BY Customer.CustomerID;
+GROUP BY CustomerID
+HAVING COUNT(OrderID) > 1)
+SELECT 
+(COUNT(DISTINCT Repeat_Cus)/
+COUNT(DISTINCT CustomerID))*100
+AS CustomerRepeatRate
+FROM Orders
+LEFT OUTER JOIN Repeat_Customers
+ON Orders.CustomerID = Repeat_Customers.Repeat_Cus;
