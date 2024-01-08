@@ -1,4 +1,4 @@
--- Calculate customer repeat rate
+-- Calculate repeat customer rate
 WITH Repeat_Customers AS
 (SELECT
 CustomerID as Repeat_Cus

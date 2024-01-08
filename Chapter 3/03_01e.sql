@@ -2,7 +2,7 @@
 SELECT
 FirstName,
 LastName,
-COUNT(Orders.OrderID) as TotalOrders,
+COUNT(DISTINCT Orders.OrderID) as TotalOrders,
 SUM(Quantity) as TotalQuantity,
 SUM(TotalDue) as TotalAmount
 FROM Orders

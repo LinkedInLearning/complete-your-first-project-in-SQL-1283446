@@ -1,10 +1,11 @@
 -- Find infrequent customers
 SELECT
+Customer.CustomerID,
 FirstName,
 LastName,
-COUNT(OrderID) as TotalOrders
+COUNT(DISTINCT OrderID) as TotalOrders
 FROM Orders
 LEFT OUTER JOIN Customer
 ON Orders.CustomerID = Customer.CustomerID
 GROUP BY Customer.CustomerID
-HAVING COUNT(OrderID) = 1;
+HAVING COUNT(DISTINCT OrderID) = 1;

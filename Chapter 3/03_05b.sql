@@ -1,1 +1,1 @@
--- Calculate customer repeat rate
+-- Calculate repeat customer rate
